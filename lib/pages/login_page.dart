@@ -18,134 +18,135 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            leading: Icon(Icons.arrow_back_ios),
-            title: Text("Login"),
-          ),
-          body: GestureDetector(
-            onTap: () {
-              FocusScope.of(context).requestFocus(new FocusNode());
-            },
-            child: FooterView(
-              children: [
-                _buildBody(context),
-              ],
-              footer: _buildFooter(),
-              flex: 4,
-            ),
-          )),
+        backgroundColor: AppColors.neutralWhite,
+        appBar: _buildAppbar(),
+        body: _buildBody(context),
+      ),
+    );
+  }
+
+  _buildAppbar() {
+    return AppBar(
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back_ios),
+        onPressed: () =>
+            Navigator.of(context).popUntil((route) => route.isFirst),
+      ),
+      title: Text("Login"),
     );
   }
 
   _buildBody(context) {
-    return Container(
-      padding: EdgeInsets.all(24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).requestFocus(new FocusNode());
+      },
+      child: FooterView(
         children: [
-          Text(
-            isSignIn ? "Sign In" : "Sign Up",
-            style: TextStyle(
-              fontSize: 40,
-              color: AppColors.neutral1,
-            ),
-          ),
-          _buidlSizedBox(2),
-          RichText(
-            text: TextSpan(
-              // style: DefaultTextStyle.of(context).style,
+          Container(
+            padding: EdgeInsets.all(24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextSpan(
-                  text: isSignIn
-                      ? 'Don\'t have an account? '
-                      : 'Enter your Email and new Password for sign up, or ',
-                  style: StylesText.bodyText2,
-                ),
-                TextSpan(
-                  recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                      setState(() {
-                        isSignIn = !isSignIn;
-                      });
-                    },
-                  text: isSignIn ? 'Sign up now!' : 'Already have account?',
-                  style: StylesText.bodyText2.copyWith(
-                    color: AppColors.primaryOrangeRed,
+                Text(
+                  isSignIn ? "Sign In" : "Sign Up",
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: AppColors.neutral1,
                   ),
-                )
+                ),
+                _buidlSizedBox(2),
+                RichText(
+                  text: TextSpan(
+                    // style: DefaultTextStyle.of(context).style,
+                    children: [
+                      TextSpan(
+                        text: isSignIn
+                            ? 'Don\'t have an account? '
+                            : 'Enter your Email and new Password for sign up, or ',
+                        style: StylesText.bodyText2,
+                      ),
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            setState(() {
+                              isSignIn = !isSignIn;
+                            });
+                          },
+                        text:
+                            isSignIn ? 'Sign up now!' : 'Already have account?',
+                        style: StylesText.bodyText2.copyWith(
+                          color: AppColors.primaryOrangeRed,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                _buidlSizedBox(4),
+                _buildTextFormField('Email or Phone Number'),
+                _buidlSizedBox(2),
+                _buildTextFormField('Password'),
+                _buidlSizedBox(2),
+                isSignIn ? SizedBox() : _buildTextFormField('Confirm Password'),
+                isSignIn ? SizedBox() : _buidlSizedBox(2),
+                isSignIn
+                    ? Center(
+                        child: Text(
+                        'Forgot Password?',
+                        style: StylesText.bodyText2,
+                      ))
+                    : SizedBox(),
+                _buidlSizedBox(3),
+                _buildElevatedButton(
+                  AppColors.primaryOrangeRed,
+                  Icon(null),
+                  Text(
+                    isSignIn ? 'SIGN IN' : 'SIGN UP',
+                    style: StylesText.bodyText1
+                        .copyWith(color: AppColors.neutralWhite),
+                  ),
+                ),
+                _buidlSizedBox(3),
+                isSignIn
+                    ? Center(
+                        child: Text(
+                        'OR',
+                        style: StylesText.bodyText2,
+                      ))
+                    : SizedBox(),
+                _buidlSizedBox(3),
+                isSignIn
+                    ? _buildElevatedButton(
+                        AppColors.sematicBlueGrey,
+                        Image(
+                          image: AssetImage(
+                              'assets/images/1.0x/facebook_logo.png'),
+                        ),
+                        Text(
+                          'CONTINUE WITH FACEBOOK',
+                          style: StylesText.bodyText3,
+                        ))
+                    : SizedBox(),
+                _buidlSizedBox(2),
+                isSignIn
+                    ? _buildElevatedButton(
+                        AppColors.sematicBlue,
+                        Image(
+                          image:
+                              AssetImage('assets/images/1.0x/google_logo.png'),
+                        ),
+                        Text(
+                          'CONTINUE WITH GOOGLE',
+                          style: StylesText.bodyText3,
+                        ))
+                    : SizedBox(),
+                // _buidlSizedBox(18),
               ],
             ),
           ),
-          _buidlSizedBox(4),
-          _buildTextFormField('Email or Phone Number'),
-          _buidlSizedBox(2),
-          _buildTextFormField('Password'),
-          _buidlSizedBox(2),
-          isSignIn ? SizedBox() : _buildTextFormField('Confirm Password'),
-          isSignIn ? SizedBox() : _buidlSizedBox(2),
-          isSignIn
-              ? Center(
-                  child: Text(
-                  'Forgot Password?',
-                  style: StylesText.bodyText1,
-                ))
-              : SizedBox(),
-          _buidlSizedBox(3),
-          Container(
-            height: 50,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: AppColors.primaryOrangeRed,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(6.0),
-                ),
-              ),
-              onPressed: () {},
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    isSignIn ? 'SIGN IN' : 'SIGN UP',
-                    style: StylesText.bodyText1,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          _buidlSizedBox(3),
-          isSignIn
-              ? Center(
-                  child: Text(
-                  'OR',
-                  style: StylesText.bodyText1,
-                ))
-              : SizedBox(),
-          _buidlSizedBox(3),
-          isSignIn
-              ? _buildElevatedButton(
-                  AppColors.sematicBlueGrey,
-                  Image(
-                    image: AssetImage('assets/images/1.0x/facebook_logo.png'),
-                  ),
-                  Text(
-                    'CONTINUE WITH FACEBOOK',
-                    style: StylesText.bodyText3,
-                  ))
-              : SizedBox(),
-          _buidlSizedBox(2),
-          isSignIn
-              ? _buildElevatedButton(
-                  AppColors.sematicBlue,
-                  Image(
-                    image: AssetImage('assets/images/1.0x/google_logo.png'),
-                  ),
-                  Text(
-                    'CONTINUE WITH GOOGLE',
-                    style: StylesText.bodyText3,
-                  ))
-              : SizedBox(),
-          // _buidlSizedBox(18),
         ],
+        footer: _buildFooter(),
+        flex: 4,
       ),
     );
   }
@@ -191,6 +192,7 @@ class _LoginState extends State<Login> {
             borderSide: BorderSide(width: 1),
           ),
           hintText: text,
+          labelStyle: StylesText.bodyText1,
           labelText: text,
         ),
       ),
@@ -232,7 +234,7 @@ class _LoginState extends State<Login> {
               ),
             ),
       backgroundColor: AppColors.neutral5,
-      // padding: EdgeInsets.all(5.0),
+      padding: EdgeInsets.only(left: 57, right: 57),
       // alignment: Alignment
       //     .bottomCenter
     );

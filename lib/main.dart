@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodule/pages/login_page.dart';
+import 'package:foodule/pages/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Login(),
+      home: Home(),
     );
   }
 }
