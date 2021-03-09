@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodule/pages/home.dart';
 import 'package:foodule/pages/restaurant.dart';
 import 'package:foodule/pages/restaurant_info.dart';
+import 'package:foodule/pages/welcome_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: RestaurantInfo(),
+      home: WelcomePage(),
     );
   }
 }

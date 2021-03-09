@@ -77,8 +77,7 @@ class Header extends StatelessWidget {
           ),
           _buidlSizedBox(2),
           Divider(
-            // color: Color(0xffEAEDF2),
-            color: Colors.red,
+            color: Color(0xffEAEDF2),
           ),
           _buidlSizedBox(2),
           Row(

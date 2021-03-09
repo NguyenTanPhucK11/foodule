@@ -20,7 +20,7 @@ class WelcomePage extends StatelessWidget {
           _buildElevatedButton(Login(), 'Login', context),
           _buildElevatedButton(Home(), 'Home', context),
           _buildElevatedButton(Restaurant(), 'Restaurant', context),
-          // _buildElevatedButton(RestaurantInfo(), 'Restaurant Info', context)
+          _buildElevatedButton(RestaurantInfo(), 'Restaurant Info', context)
         ],
       ),
     );
