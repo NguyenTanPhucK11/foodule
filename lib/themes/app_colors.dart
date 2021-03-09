@@ -12,7 +12,9 @@ class AppColors {
   static const Color neutral4 = Color(0xffC3C3C3);
   static const Color neutral5 = Color(0xffF6F6F6);
   static const Color neutralWhite = Colors.white;
-  static const Color neutralButton = Color(0xffF0F0F0);
+  // static const Color neutralButton = Color(0xffF0F0F0);
+
+  static const Color backgroundGrey = Color(0xffEFF0F3);
 
   static const Color semanticRed = Color(0xffF43E3E);
   static const Color sematicBlue = Color(0xff4285F4);

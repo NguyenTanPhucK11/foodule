@@ -1,10 +1,8 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:foodule/themes/app_colors.dart';
 import 'package:foodule/themes/text_styles.dart';
 
-class NewProduct extends StatelessWidget {
+class SpedialDelivery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -62,12 +60,12 @@ class NewProduct extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 10),
-                        Text(
-                          '\$ 20.00',
-                          style: StylesText.caption.copyWith(
-                              color: AppColors.neutral3,
-                              decoration: TextDecoration.lineThrough),
-                        )
+                        // Text(
+                        //   '\$ 20.00',
+                        //   style: StylesText.caption.copyWith(
+                        //       color: AppColors.neutral3,
+                        //       decoration: TextDecoration.lineThrough),
+                        // )
                       ],
                     ),
                   ],

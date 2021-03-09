@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:foodule/widgets/restaurant/new_product.dart';
+import 'package:foodule/widgets/restaurant/spedial_delivery.dart';
 
-class ListNewProduct extends StatelessWidget {
+class ListSpedialDelivery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -9,7 +9,7 @@ class ListNewProduct extends StatelessWidget {
       itemCount: 5,
       scrollDirection: Axis.vertical,
       itemBuilder: (context, index) {
-        return NewProduct();
+        return SpedialDelivery();
       },
     );
   }

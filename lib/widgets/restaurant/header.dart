@@ -34,7 +34,7 @@ class Header extends StatelessWidget {
               _buildButton('Western cuisine'),
             ],
           ),
-          _buidlSizedBox(2),
+          _buidlSizedBox(4),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -113,7 +113,7 @@ class Header extends StatelessWidget {
       height: 25,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: AppColors.neutralButton,
+          primary: AppColors.backgroundGrey,
         ),
         onPressed: () {},
         child: Text(
