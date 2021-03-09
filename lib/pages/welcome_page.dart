@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodule/pages/home.dart';
 import 'package:foodule/pages/login_page.dart';
+import 'package:foodule/pages/restaurant.dart';
 
 class WelcomePage extends StatelessWidget {
   final int index;
@@ -36,6 +37,17 @@ class WelcomePage extends StatelessWidget {
               );
             },
             child: Text('Home'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Restaurant(),
+                ),
+              );
+            },
+            child: Text('Restaurant'),
           )
         ],
       ),

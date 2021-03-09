@@ -14,7 +14,7 @@ class PopularCuisines extends StatelessWidget {
             children: [
               Text(
                 'Popular Cuisines',
-                style: StylesText.headline4.copyWith(
+                style: StylesText.headline5.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -64,7 +64,6 @@ class PopularCuisines extends StatelessWidget {
             },
           ),
         ),
-        _buidlSizedBox(8),
       ],
     );
   }

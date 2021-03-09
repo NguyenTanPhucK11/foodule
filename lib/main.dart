@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodule/pages/home.dart';
+import 'package:foodule/pages/restaurant.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
+      home: Restaurant(),
     );
   }
 }
@@ -99,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline5,
             ),
           ],
         ),

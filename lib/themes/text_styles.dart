@@ -15,13 +15,14 @@ class StylesText {
     fontFamily: FontFamily.fontAveinr,
   );
   static TextStyle headline4 = TextStyle(
-    fontSize: 20,
+    fontSize: 24,
     fontFamily: FontFamily.fontAveinr,
     color: AppColors.neutral1,
   );
   static TextStyle headline5 = TextStyle(
     fontSize: 20,
     fontFamily: FontFamily.fontAveinr,
+    color: AppColors.neutral1,
   );
   static TextStyle headline6 = TextStyle(
     fontSize: 16,

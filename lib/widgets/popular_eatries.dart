@@ -14,7 +14,7 @@ class PopularEatries extends StatelessWidget {
             children: [
               Text(
                 'Popular Eatries',
-                style: StylesText.headline4.copyWith(
+                style: StylesText.headline5.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
               ),

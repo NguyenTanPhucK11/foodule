@@ -14,7 +14,7 @@ class Nearby extends StatelessWidget {
             children: [
               Text(
                 'Nearby',
-                style: StylesText.headline4.copyWith(
+                style: StylesText.headline5.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
               ),
