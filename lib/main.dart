@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodule/pages/home.dart';
+import 'package:foodule/pages/orther_checkout.dart';
 import 'package:foodule/pages/restaurant.dart';
 import 'package:foodule/pages/restaurant_info.dart';
 import 'package:foodule/pages/restaurant_menu.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
+      home: OrtherCheckout(),
     );
   }
 }
