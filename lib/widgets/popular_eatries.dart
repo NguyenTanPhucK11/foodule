@@ -28,6 +28,7 @@ class PopularEatries extends StatelessWidget {
             ],
           ),
         ),
+        _buidlSizedBox(2),
         Container(
           // width: 241,
           height: 188,

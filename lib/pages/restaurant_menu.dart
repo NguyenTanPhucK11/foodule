@@ -18,6 +18,7 @@ class _RestaurantMenuState extends State<RestaurantMenu> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   Flushbar flush;
   bool _wasButtonClicked;
+  bool _isDisable = true;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -130,7 +131,9 @@ class _RestaurantMenuState extends State<RestaurantMenu> {
             icon: Icon(Icons.favorite_border_outlined,
                 size: 24, color: AppColors.neutral1),
             onPressed: () {
-              _buildFlushbar();
+              if (_isDisable) _buildFlushbar();
+
+              // _buildFlushbar();
             },
           ),
         ],
@@ -153,6 +156,7 @@ class _RestaurantMenuState extends State<RestaurantMenu> {
   }
 
   _buildFlushbar() {
+    _isDisable = false;
     flush = Flushbar<bool>(
       backgroundColor: AppColors.neutralWhite,
       margin: EdgeInsets.only(left: 32, right: 32, top: 23),
@@ -196,6 +200,7 @@ class _RestaurantMenuState extends State<RestaurantMenu> {
             ),
             onPressed: () {
               flush.dismiss(true);
+              _isDisable = true;
             },
           ),
           Icon(null),

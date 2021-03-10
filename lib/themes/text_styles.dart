@@ -15,6 +15,7 @@ class StylesText {
     fontSize: 27,
     fontFamily: FontFamily.fontAveinr,
     fontWeight: FontWeight.w500,
+    color: AppColors.neutral1,
   );
   static TextStyle headline4 = TextStyle(
     fontSize: 24,
