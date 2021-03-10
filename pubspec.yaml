@@ -67,6 +67,7 @@ flutter:
     - assets/images/1.0x/3dot.png
     - assets/images/1.0x/cash.png
     - assets/images/1.0x/card.png
+    - assets/images/1.0x/Subtract.png
     - assets/data/
 
   # An image asset can refer to one or more resolution-specific "variants", see
