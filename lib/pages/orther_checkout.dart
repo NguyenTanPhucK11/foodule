@@ -5,6 +5,7 @@ import 'package:foodule/widgets/order_checkout/contact.dart';
 import 'package:foodule/widgets/order_checkout/deliver_to.dart';
 import 'package:foodule/widgets/order_checkout/order_summary.dart';
 import 'package:foodule/widgets/order_checkout/payment_method.dart';
+import 'package:foodule/widgets/order_checkout/total.dart';
 
 class OrtherCheckout extends StatelessWidget {
   @override
@@ -48,18 +49,21 @@ class OrtherCheckout extends StatelessWidget {
   }
 
   _buildBody() {
-    return Container(
-      child: Column(
-        children: [
-          DeliverTo(),
-          _buildSpace(),
-          Contact(),
-          _buildSpace(),
-          OrderSummary(),
-          _buildSpace(),
-          PaymentMethod(),
-          _buildSpace(),
-        ],
+    return SingleChildScrollView(
+      child: Container(
+        child: Column(
+          children: [
+            DeliverTo(),
+            _buildSpace(),
+            Contact(),
+            _buildSpace(),
+            OrderSummary(),
+            _buildSpace(),
+            PaymentMethod(),
+            _buildSpace(),
+            Total(),
+          ],
+        ),
       ),
     );
   }
