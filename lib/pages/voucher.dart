@@ -82,10 +82,10 @@ class Voucher extends StatelessWidget {
                     color: Color(0xff9B9B9B),
                   ),
                 ),
-                hintText: 'Promo Code or Voucher',
+                hintText: 'Enter Promo Code',
                 labelStyle:
                     StylesText.bodyText2.copyWith(color: Color(0xff9B9B9B)),
-                labelText: 'Promo Code or Voucher',
+                labelText: 'Enter Promo Code',
               ),
             ),
           ),
@@ -119,14 +119,27 @@ class Voucher extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            width: 327,
-            height: 88,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(12),
+                  topRight: Radius.circular(12),
+                  bottomLeft: Radius.circular(12),
+                  bottomRight: Radius.circular(12)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 1,
+                  blurRadius: 7,
+                  offset: Offset(0, 1), // changes position of shadow
+                ),
+              ],
+            ),
             child: Image.asset(
               'assets/images/1.0x/Subtract.png',
             ),
           ),
           Positioned(
-              top: 23,
+              top: 10,
               left: 20,
               child: Container(
                 child: Row(
@@ -155,7 +168,7 @@ class Voucher extends StatelessWidget {
                                 color: AppColors.neutralWhite,
                                 fontWeight: FontWeight.bold,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -180,6 +193,31 @@ class Voucher extends StatelessWidget {
                           ),
                           Text(
                             'BLFD30',
+                            style: StylesText.headline6,
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 75),
+                    Container(
+                      height: 68,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Exp.',
+                            style: StylesText.headline6.copyWith(
+                              color: AppColors.primaryOrangeRed,
+                            ),
+                          ),
+                          _buidlSizedBox(2),
+                          Text(
+                            '07',
+                            style: StylesText.headline6,
+                          ),
+                          Text(
+                            'Dec',
                             style: StylesText.headline6,
                           )
                         ],
