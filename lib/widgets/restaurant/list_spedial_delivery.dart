@@ -5,11 +5,16 @@ class ListSpedialDelivery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: EdgeInsets.only(left: 24),
+      padding: EdgeInsets.only(left: 0),
       itemCount: 5,
       scrollDirection: Axis.vertical,
       itemBuilder: (context, index) {
-        return SpedialDelivery();
+        return index == 1
+            ? SpedialDelivery(isCheck: true, isDiscount: true)
+            : SpedialDelivery(
+                isCheck: false,
+                isDiscount: false,
+              );
       },
     );
   }

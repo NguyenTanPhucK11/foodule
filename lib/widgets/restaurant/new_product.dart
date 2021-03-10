@@ -12,6 +12,7 @@ class NewProduct extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.only(top: 16, bottom: 16),
+          padding: EdgeInsets.only(left: 24, right: 24),
           height: 74,
           child: Row(
             children: [

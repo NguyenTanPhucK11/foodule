@@ -109,8 +109,13 @@ class Restaurant extends StatelessWidget {
 
   _buildListRestaurant(Widget widget, String name, bool isNewProduct) {
     return Container(
-      padding:
-          isNewProduct ? EdgeInsets.only(top: 120) : EdgeInsets.only(top: 0),
+      padding: isNewProduct
+          ? EdgeInsets.only(
+              top: 120,
+            )
+          : EdgeInsets.only(
+              top: 0,
+            ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

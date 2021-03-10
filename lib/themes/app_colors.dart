@@ -15,6 +15,7 @@ class AppColors {
   // static const Color neutralButton = Color(0xffF0F0F0);
 
   static const Color backgroundGrey = Color(0xffEFF0F3);
+  static const Color hoverColor = Color(0xffFFF9F4);
 
   static const Color semanticRed = Color(0xffF43E3E);
   static const Color sematicBlue = Color(0xff4285F4);
