@@ -31,7 +31,7 @@ class StylesText {
   static TextStyle headline6 = TextStyle(
     fontSize: 16,
     fontFamily: FontFamily.fontAveinr,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.bold,
     color: AppColors.neutral1,
   );
   static TextStyle bodyText1 = TextStyle(

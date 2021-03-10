@@ -3,6 +3,7 @@ import 'package:foodule/pages/home.dart';
 import 'package:foodule/pages/restaurant.dart';
 import 'package:foodule/pages/restaurant_info.dart';
 import 'package:foodule/pages/restaurant_menu.dart';
+import 'package:foodule/pages/test.dart';
 import 'package:foodule/pages/welcome_page.dart';
 
 void main() {

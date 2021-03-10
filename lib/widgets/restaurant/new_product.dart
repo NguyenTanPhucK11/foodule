@@ -43,6 +43,7 @@ class NewProduct extends StatelessWidget {
                           'KCal : 475',
                           style: StylesText.caption.copyWith(
                             color: AppColors.neutral2,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
@@ -51,6 +52,7 @@ class NewProduct extends StatelessWidget {
                       'Shrimp, mushroom, cheese, tomatoa',
                       style: StylesText.caption.copyWith(
                         color: AppColors.neutral3,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(height: 10),
@@ -66,8 +68,10 @@ class NewProduct extends StatelessWidget {
                         Text(
                           '\$ 20.00',
                           style: StylesText.caption.copyWith(
-                              color: AppColors.neutral3,
-                              decoration: TextDecoration.lineThrough),
+                            color: AppColors.neutral3,
+                            decoration: TextDecoration.lineThrough,
+                            fontWeight: FontWeight.bold,
+                          ),
                         )
                       ],
                     ),

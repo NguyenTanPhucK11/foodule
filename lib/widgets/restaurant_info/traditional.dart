@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:foodule/themes/app_colors.dart';
 import 'package:foodule/themes/text_styles.dart';
 
-class SpedialDelivery extends StatelessWidget {
+class Traditional extends StatelessWidget {
   final bool isCheck;
   final bool isDiscount;
-  const SpedialDelivery({Key key, @required this.isCheck, this.isDiscount})
+  const Traditional({Key key, @required this.isCheck, this.isDiscount})
       : super(key: key);
 
   @override
@@ -68,7 +68,6 @@ class SpedialDelivery extends StatelessWidget {
                               '\$ 12.00',
                               style: StylesText.headline6.copyWith(
                                 color: AppColors.primaryOrangeRed,
-                                // fontWeight: FontWeight.bold,
                               ),
                             ),
                             SizedBox(width: 10),
