@@ -3,12 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:foodule/themes/app_colors.dart';
 import 'package:foodule/themes/text_styles.dart';
 
-class FoodOption extends StatefulWidget {
+class PlaceOrderSuccessfully extends StatefulWidget {
   @override
-  _FoodOptionState createState() => _FoodOptionState();
+  _PlaceOrderSuccessfullyState createState() => _PlaceOrderSuccessfullyState();
 }
 
-class _FoodOptionState extends State<FoodOption> {
+class _PlaceOrderSuccessfullyState extends State<PlaceOrderSuccessfully> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,74 +17,11 @@ class _FoodOptionState extends State<FoodOption> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              child: Text('Show Cupertino Dialog'),
+              child: Text('Place Order Successfully'),
               onPressed: _showAlertDialog,
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  _showCupertinoDialog() {
-    showDialog(
-      context: context,
-      builder: (_) => new CupertinoAlertDialog(
-        title: Column(
-          children: [
-            Container(
-              // padding: EdgeInsets.only(top: 16),
-              width: 65,
-              height: 65,
-              child: Image.asset('assets/images/1.0x/check_circle.png'),
-            ),
-            _buidlSizedBox(4),
-            Text(
-              "You Place the Order Successfully",
-              style: StylesText.headline5.copyWith(fontWeight: FontWeight.bold),
-            ),
-            _buidlSizedBox(2),
-          ],
-        ),
-        content: RichText(
-          text: TextSpan(children: [
-            TextSpan(
-              text:
-                  "You placed the order successfully. You will get your food within ",
-              style: StylesText.bodyText3.copyWith(
-                color: AppColors.neutral1,
-              ),
-            ),
-            TextSpan(
-              text: "15 minutes. ",
-              style: StylesText.bodyText3.copyWith(
-                color: AppColors.neutral1,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            TextSpan(
-              text: "Thanks for using our services. Enjoy your food!",
-              style: StylesText.bodyText3.copyWith(
-                color: AppColors.neutral1,
-              ),
-            ),
-          ]),
-        ),
-        actions: <Widget>[
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(primary: Colors.grey[300]),
-            child: Text(
-              'Keep Browsing',
-              style: StylesText.bodyText1.copyWith(
-                color: AppColors.primaryOrangeRed,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          )
-        ],
       ),
     );
   }
@@ -121,9 +58,10 @@ class _FoodOptionState extends State<FoodOption> {
           ),
         ),
         content: Container(
-          height: 100,
+          height: 76,
           width: 303,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RichText(
                 textAlign: TextAlign.center,
@@ -139,7 +77,7 @@ class _FoodOptionState extends State<FoodOption> {
                     text: "15 minutes. ",
                     style: StylesText.caption.copyWith(
                       color: AppColors.neutral1,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                   TextSpan(
@@ -150,13 +88,10 @@ class _FoodOptionState extends State<FoodOption> {
                   ),
                 ]),
               ),
-              _buidlSizedBox(4),
+              _buidlSizedBox(2),
               Container(
-                height: 40,
-                width: 210,
-                child: ElevatedButton(
-                  style:
-                      ElevatedButton.styleFrom(primary: AppColors.neutralWhite),
+                height: 25,
+                child: InkWell(
                   child: Text(
                     'Keep Browsing',
                     style: StylesText.bodyText1.copyWith(
@@ -164,7 +99,7 @@ class _FoodOptionState extends State<FoodOption> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  onPressed: () {
+                  onTap: () {
                     Navigator.of(context).pop();
                   },
                 ),

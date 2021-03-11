@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodule/pages/place_order_successfully.dart';
 import 'package:foodule/pages/home.dart';
 import 'package:foodule/pages/login_page.dart';
 import 'package:foodule/pages/restaurant.dart';
@@ -20,7 +21,8 @@ class WelcomePage extends StatelessWidget {
           _buildElevatedButton(Login(), 'Login', context),
           _buildElevatedButton(Home(), 'Home', context),
           _buildElevatedButton(Restaurant(), 'Restaurant', context),
-          _buildElevatedButton(RestaurantInfo(), 'Restaurant Info', context)
+          _buildElevatedButton(RestaurantInfo(), 'Restaurant Info', context),
+          _buildElevatedButton(PlaceOrderSuccessfully(), 'Place Order Successfully', context)
         ],
       ),
     );
