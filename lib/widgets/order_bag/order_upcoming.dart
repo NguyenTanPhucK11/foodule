@@ -38,7 +38,10 @@ class OrderUpcoming extends StatelessWidget {
           _buidlSizedBox(2),
           Container(
             height: 220,
-            child: ListFastFood(),
+            child: ListFastFood(
+              isRateReOrder: false,
+              isColorPrimary: true,
+            ),
           ),
         ],
       ),

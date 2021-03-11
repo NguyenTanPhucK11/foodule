@@ -3,7 +3,7 @@ import 'package:foodule/themes/text_styles.dart';
 import 'package:foodule/widgets/order_bag/list_drink.dart';
 import 'package:foodule/widgets/order_bag/list_fastfood.dart';
 
-class OrderBag extends StatelessWidget {
+class OrderHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -40,10 +40,10 @@ class OrderBag extends StatelessWidget {
               child: Text('Fast Food', style: StylesText.headline5)),
           _buidlSizedBox(2),
           Container(
-            height: 220,
+            height: 330,
             child: ListFastFood(
-              isRateReOrder: false,
-              isColorPrimary: true,
+              isRateReOrder: true,
+              isColorPrimary: false,
             ),
           ),
           _buidlSizedBox(4),
@@ -52,10 +52,10 @@ class OrderBag extends StatelessWidget {
               child: Text('Drink', style: StylesText.headline5)),
           _buidlSizedBox(2),
           Container(
-            height: 110,
+            height: 160,
             child: ListDrink(
-              isRateReOrder: false,
-              isColorPrimary: true,
+              isRateReOrder: true,
+              isColorPrimary: false,
             ),
           ),
         ],

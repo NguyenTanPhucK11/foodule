@@ -3,6 +3,10 @@ import 'package:foodule/themes/app_colors.dart';
 import 'package:foodule/themes/text_styles.dart';
 
 class Drink extends StatelessWidget {
+  final bool isRateReOrder;
+  final bool isColorPrimary;
+
+  const Drink({@required this.isRateReOrder, @required this.isColorPrimary});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,7 +34,7 @@ class Drink extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Creamos - Chapel Ln',
+                      'Creamos',
                       style: StylesText.headline6,
                     ),
                     Text(
@@ -52,7 +56,7 @@ class Drink extends StatelessWidget {
                             ),
                             SizedBox(width: 5),
                             Text(
-                              '10 mins',
+                              '15 mins',
                               style: StylesText.caption.copyWith(
                                 color: AppColors.neutral1,
                                 fontWeight: FontWeight.bold,
@@ -74,9 +78,11 @@ class Drink extends StatelessWidget {
                           ],
                         ),
                         Text(
-                          '\$ 5.00',
+                          '\$ 16.00',
                           style: StylesText.headline6.copyWith(
-                            color: AppColors.primaryOrangeRed,
+                            color: isColorPrimary
+                                ? AppColors.primaryOrange
+                                : AppColors.neutral1,
                           ),
                         ),
                       ],
@@ -87,8 +93,79 @@ class Drink extends StatelessWidget {
             ],
           ),
         ),
+        _buildRateReOrder(),
         Divider(height: 0),
       ],
+    );
+  }
+
+  _buildRateReOrder() {
+    return isRateReOrder
+        ? Container(
+            padding: EdgeInsets.only(top: 8, bottom: 16, right: 24),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  width: 106,
+                  height: 29,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      // shadowColor: Colors.white,
+                      elevation: 0,
+                      primary: AppColors.neutralWhite,
+                      shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(6.0),
+                        side: BorderSide(
+                          color: AppColors.neutral2,
+                        ),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      'RATE',
+                      style: StylesText.bodyText3.copyWith(
+                        color: AppColors.neutral2,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 16),
+                Container(
+                  width: 106,
+                  height: 29,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      // shadowColor: Colors.white,
+                      elevation: 0,
+                      primary: AppColors.neutralWhite,
+                      shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(6.0),
+                        side: BorderSide(
+                          color: AppColors.primaryOrange,
+                        ),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      'RE-ORDER',
+                      style: StylesText.bodyText3.copyWith(
+                        color: AppColors.primaryOrange,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
+        : SizedBox();
+  }
+
+  _buidlSizedBox(int scales) {
+    return SizedBox(
+      height: scales * 4.0,
     );
   }
 }

@@ -5,6 +5,7 @@ import 'package:foodule/widgets/circle_tab_indicator.dart';
 import 'package:foodule/widgets/order_bag/list_drink.dart';
 import 'package:foodule/widgets/order_bag/list_fastfood.dart';
 import 'package:foodule/widgets/order_bag/order_bag.dart';
+import 'package:foodule/widgets/order_bag/order_history.dart';
 import 'package:foodule/widgets/order_bag/order_upcoming.dart';
 
 class Order extends StatelessWidget {
@@ -17,6 +18,7 @@ class Order extends StatelessWidget {
         initialIndex: 3,
         length: 4,
         child: Scaffold(
+          backgroundColor: AppColors.neutralWhite,
           appBar: _buildAppBar(context),
           body: _buildBody(context),
         ),
@@ -25,7 +27,7 @@ class Order extends StatelessWidget {
   }
 
   _buildBody(context) {
-    return OrderUpcoming();
+    return OrderHistory();
   }
 
   _buildAppBar(context) {
