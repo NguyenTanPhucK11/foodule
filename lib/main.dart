@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodule/pages/food_option.dart';
 import 'package:foodule/pages/home.dart';
 import 'package:foodule/pages/orther_checkout.dart';
 import 'package:foodule/pages/restaurant.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Voucher(),
+      home: FoodOption(),
     );
   }
 }
