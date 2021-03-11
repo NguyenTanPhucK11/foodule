@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodule/pages/order.dart';
 import 'package:foodule/pages/place_order_successfully.dart';
 import 'package:foodule/pages/home.dart';
 import 'package:foodule/pages/orther_checkout.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: PlaceOrderSuccessfully(),
+      home: Order(),
     );
   }
 }
