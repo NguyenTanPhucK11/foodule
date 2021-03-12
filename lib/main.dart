@@ -6,6 +6,7 @@ import 'package:foodule/pages/orther_checkout.dart';
 import 'package:foodule/pages/restaurant.dart';
 import 'package:foodule/pages/restaurant_info.dart';
 import 'package:foodule/pages/restaurant_menu.dart';
+import 'package:foodule/pages/score_and_S_for_R.dart';
 import 'package:foodule/pages/test.dart';
 import 'package:foodule/pages/voucher.dart';
 import 'package:foodule/pages/welcome_page.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Order(),
+      home: ScoreAndSFR(),
     );
   }
 }

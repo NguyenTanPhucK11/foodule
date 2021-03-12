@@ -69,6 +69,7 @@ flutter:
     - assets/images/1.0x/card.png
     - assets/images/1.0x/Subtract.png
     - assets/images/1.0x/check_circle.png
+    - assets/images/1.0x/star.png
 
     - assets/data/
 
